@@ -44,12 +44,12 @@ export default function IntroSlide() {
     <div className="h-full bg-transparent">
       <div
         onMouseMove={onMouseMove}
-        className="relative pl-16 flex flex-col justify-center bg-transparent group/card overflow-hidden w-full h-full"
+        className="relative pl-16 flex flex-col justify-center bg-transparent group/card overflow-hidden w-full h-screen"
       >
         <Pattern mouseX={mouseX} mouseY={mouseY} randomString={randomString} />
         <TextGenerateEffect words={introduction} className="text-6xl" />
         <h2 className="text-3xl motion-delay-1000 motion-opacity-in-0 motion-duration-2000">
-          A software engineer, sports fan, and Pokemon fan.
+          A software engineer, sports fan, and gamer.
         </h2>
       </div>
     </div>
