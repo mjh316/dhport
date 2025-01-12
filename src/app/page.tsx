@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
+      {/* test */}
       <div className="flex xl:flex-row flex-col min-h-screen font-[family-name:var(--font-geist-sans)]">
         <div className="basis-1/2 min-h-screen flex flex-col justify-center">
           <IntroSlide />
