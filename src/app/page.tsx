@@ -5,6 +5,8 @@ import Image from "next/image";
 import { PinContainer } from "./components/ui/3d-pin";
 import Link from "next/link";
 
+export const experimental_ppr = true;
+
 export default function Home() {
   return (
     <>
