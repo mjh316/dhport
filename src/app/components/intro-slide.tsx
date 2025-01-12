@@ -8,6 +8,7 @@ import {
   MotionValue,
 } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Highlight } from "./ui/highlight";
 
 const introduction = "Hi, I'm Justin.";
 const STRING_LENGTH = 9000;
@@ -48,9 +49,12 @@ export default function IntroSlide() {
       >
         <Pattern mouseX={mouseX} mouseY={mouseY} randomString={randomString} />
         <TextGenerateEffect words={introduction} className="text-6xl" />
-        <h2 className="text-3xl motion-delay-1000 motion-opacity-in-0 motion-duration-2000">
+        <Highlight
+          delay={1}
+          className="text-3xl motion-delay-1000 motion-opacity-in-0 motion-duration-2000 max-w-fit"
+        >
           A software engineer, sports fan, and gamer.
-        </h2>
+        </Highlight>
       </div>
     </div>
   );
