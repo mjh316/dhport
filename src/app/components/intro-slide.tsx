@@ -89,10 +89,20 @@ function Pattern({
 
 const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+const memo = new Map<number, string>();
 function generateRandomString(length: number) {
-  let result = "";
-  for (let i = 0; i < length; ++i) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  if (memo.size === 0) {
+    for (let times = 0; times < 10; ++times) {
+      let result = "";
+      for (let i = 0; i < length; ++i) {
+        result += characters.charAt(
+          Math.floor(Math.random() * characters.length)
+        );
+      }
+      memo.set(times, result);
+    }
   }
-  return result;
+  const randomIndex = Math.floor(Math.random() * memo.size);
+  return memo.get(randomIndex) ?? "";
 }
