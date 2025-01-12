@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import tailwindcssMotion from "tailwindcss-motion";
 const svgToDataUri = require("mini-svg-data-uri");
 
 const colors = require("tailwindcss/colors");
@@ -67,7 +66,7 @@ export default {
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
-    tailwindcssMotion,
+    require("tailwindcss-motion"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
